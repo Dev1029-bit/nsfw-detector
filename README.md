@@ -60,7 +60,7 @@ nsfw_detector_core/
 
 ```json
 {
-  "model_path": "saved_model.h5",
+  "model_path": "model/saved_model.h5",
   "nsfw_threshold": 0.4,
   "intermediate_flag_range": [0.2, 0.4]
 }
