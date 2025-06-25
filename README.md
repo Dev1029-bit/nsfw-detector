@@ -42,16 +42,24 @@ Then classified using threshold logic from `config.json`.
 nsfw_detector_core/
 │
 ├── app/
-│   ├── main.py           # FastAPI app
-│   ├── model.py          # Model prediction logic
-│   ├── utils.py          # Base64 preprocessing, config loader
-│   └── schemas.py        # Request/Response models
+│   ├── main.py           # FastAPI application entry point
+│   ├── model.py          # Model prediction and scoring logic
+│   ├── utils.py          # Base64 decoding, preprocessing, config loader
+│   └── schemas.py        # Pydantic models for request and response
 │
-├── config.json           # Model config (thresholds, path)
-├── Dockerfile            # Container definition
-├── requirements.txt      # Python dependencies
-├── saved_model.h5        # Pre-trained NSFW classification model
-└── README.md             # You’re here!
+├── config.json           # Configuration for model thresholds and path
+├── Dockerfile            # Docker image definition
+├── requirements.txt      # Python dependencies list
+├── README.md             # Project documentation
+│
+├── model/
+│   └── saved_model.h5    # Pre-trained MobileNetV2 NSFW classifier
+│
+├── datasets/             # Local image datasets (used for evaluation)
+│   └── safe/             # Manually curated safe images (e.g., from Unsplash)
+│       ├── safe_1.jpg
+│       ├── safe_2.jpg
+│       └── ...
 ```
 
 ---
